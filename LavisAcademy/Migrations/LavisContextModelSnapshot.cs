@@ -71,6 +71,31 @@ namespace LavisAcademy.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("LavisAcademy.Models.Education", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PurchaseLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Educations");
+                });
+
             modelBuilder.Entity("LavisAcademy.Models.EducationCoach", b =>
                 {
                     b.Property<int>("Id")
@@ -105,23 +130,6 @@ namespace LavisAcademy.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("EducationCoaches");
-                });
-
-            modelBuilder.Entity("LavisAcademy.Models.Period", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("PeriodPhoto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Periods");
                 });
 #pragma warning restore 612, 618
         }

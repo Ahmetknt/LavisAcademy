@@ -5,7 +5,7 @@
 namespace LavisAcademy.Migrations
 {
     /// <inheritdoc />
-    public partial class First : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -59,16 +59,18 @@ namespace LavisAcademy.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Periods",
+                name: "Educations",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    PeriodPhoto = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Level = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PurchaseLink = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Periods", x => x.Id);
+                    table.PrimaryKey("PK_Educations", x => x.Id);
                 });
         }
 
@@ -85,7 +87,7 @@ namespace LavisAcademy.Migrations
                 name: "EducationCoaches");
 
             migrationBuilder.DropTable(
-                name: "Periods");
+                name: "Educations");
         }
     }
 }

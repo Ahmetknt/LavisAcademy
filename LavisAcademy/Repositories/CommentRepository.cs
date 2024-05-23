@@ -1,6 +1,6 @@
 ﻿using LavisAcademy.Core;
 using LavisAcademy.DataAccess;
-using LavisAcademy.Models;
+using LavisAcademy.Entities;
 using LavisAcademy.Repositories.Interfaces;
 
 namespace LavisAcademy.Repositories

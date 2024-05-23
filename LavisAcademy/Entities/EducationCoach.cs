@@ -1,6 +1,6 @@
-﻿using LavisAcademy.Models.Interface;
+﻿using LavisAcademy.Entities.Interface;
 
-namespace LavisAcademy.Models
+namespace LavisAcademy.Entities
 {
     public class EducationCoach : IEntity
     {

@@ -1,5 +1,5 @@
 ﻿using Core.Results;
-using LavisAcademy.Models;
+using LavisAcademy.Entities;
 using IResult = Core.Results.IResult;
 
 namespace LavisAcademy.Service.Interfaces

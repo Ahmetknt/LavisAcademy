@@ -1,5 +1,5 @@
 ﻿using LavisAcademy.Core;
-using LavisAcademy.Models;
+using LavisAcademy.Entities;
 
 namespace LavisAcademy.Repositories.Interfaces
 {

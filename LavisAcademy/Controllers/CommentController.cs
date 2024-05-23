@@ -1,4 +1,4 @@
-﻿using LavisAcademy.Models;
+﻿using LavisAcademy.Entities;
 using LavisAcademy.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

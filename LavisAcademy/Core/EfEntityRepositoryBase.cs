@@ -1,4 +1,4 @@
-﻿using LavisAcademy.Models.Interface;
+﻿using LavisAcademy.Entities.Interface;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 

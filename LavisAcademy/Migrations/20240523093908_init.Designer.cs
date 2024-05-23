@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LavisAcademy.Migrations
 {
     [DbContext(typeof(LavisContext))]
-    [Migration("20240518114227_First")]
-    partial class First
+    [Migration("20240523093908_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -74,6 +74,31 @@ namespace LavisAcademy.Migrations
                     b.ToTable("Comments");
                 });
 
+            modelBuilder.Entity("LavisAcademy.Models.Education", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Level")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PurchaseLink")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Educations");
+                });
+
             modelBuilder.Entity("LavisAcademy.Models.EducationCoach", b =>
                 {
                     b.Property<int>("Id")
@@ -108,23 +133,6 @@ namespace LavisAcademy.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("EducationCoaches");
-                });
-
-            modelBuilder.Entity("LavisAcademy.Models.Period", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("PeriodPhoto")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Periods");
                 });
 #pragma warning restore 612, 618
         }

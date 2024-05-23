@@ -1,4 +1,4 @@
-﻿namespace LavisAcademy.Models.Interface
+﻿namespace LavisAcademy.Entities.Interface
 {
     public interface IEntity
     {

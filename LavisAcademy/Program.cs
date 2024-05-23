@@ -21,8 +21,8 @@ builder.Services.AddScoped<ICommentRepository, CommentRepository>();
 builder.Services.AddScoped<IAboutUsService, AboutUsService>();
 builder.Services.AddScoped<IAboutRepository, AboutRepository>();
 
-builder.Services.AddScoped<IPeriodService, PeriodService>();
-builder.Services.AddScoped<IPeriodRepository, PeriodRepository>();
+builder.Services.AddScoped<IEducationService, EducationService>();
+builder.Services.AddScoped<IEducationRepository, EducationRepository>();
 
 builder.Services.AddScoped<IEducationCoachService, EducationCoachService>();
 builder.Services.AddScoped<IEducationCoachRepository, EducationCoachRepository>();

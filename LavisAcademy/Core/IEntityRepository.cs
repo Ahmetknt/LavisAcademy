@@ -1,4 +1,4 @@
-﻿using LavisAcademy.Models.Interface;
+﻿using LavisAcademy.Entities.Interface;
 using System.Linq.Expressions;
 using System.Security.Principal;
 

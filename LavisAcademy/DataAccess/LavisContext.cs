@@ -1,4 +1,4 @@
-﻿using LavisAcademy.Models;
+﻿using LavisAcademy.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace LavisAcademy.DataAccess
@@ -12,7 +12,7 @@ namespace LavisAcademy.DataAccess
         }
 
         public DbSet<AboutUs> AboutUs { get; set; }
-        public DbSet<Period> Periods { get; set; }
+        public DbSet<Education> Educations { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<EducationCoach> EducationCoaches { get; set; }
 

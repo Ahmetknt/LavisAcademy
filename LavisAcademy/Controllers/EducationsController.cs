@@ -1,4 +1,4 @@
-﻿using LavisAcademy.Models;
+﻿using LavisAcademy.Entities;
 using LavisAcademy.Service;
 using LavisAcademy.Service.Interfaces;
 using Microsoft.AspNetCore.Http;
@@ -8,18 +8,18 @@ namespace LavisAcademy.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class PeriodsController : ControllerBase
+    public class EducationsController : ControllerBase
     {
-        IPeriodService _periodService;
-        public PeriodsController(IPeriodService periodService)
+        IEducationService _educationService;
+        public EducationsController(IEducationService educationService)
         {
-            _periodService = periodService;
+            _educationService = educationService;
         }
 
         [HttpPost("add")]
-        public IActionResult Add(Period period)
+        public IActionResult Add(Education education)
         {
-            var result = _periodService.Add(period);
+            var result = _educationService.Add(education);
             if (result.Success)
             {
                 return Ok(result);
@@ -29,9 +29,9 @@ namespace LavisAcademy.Controllers
         }
 
         [HttpPost("delete")]
-        public IActionResult Delete(Period period)
+        public IActionResult Delete(Education education)
         {
-            var result = _periodService.Delete(period);
+            var result = _educationService.Delete(education);
             if (result.Success)
             {
                 return Ok(result);
@@ -41,9 +41,9 @@ namespace LavisAcademy.Controllers
         }
 
         [HttpPost("update")]
-        public IActionResult Update(Period period)
+        public IActionResult Update(Education education)
         {
-            var result = _periodService.Update(period);
+            var result = _educationService.Update(education);
             if (result.Success)
             {
                 return Ok(result);
@@ -55,7 +55,7 @@ namespace LavisAcademy.Controllers
         [HttpGet("getall")]
         public IActionResult GetAll()
         {
-            var result = _periodService.GetAll();
+            var result = _educationService.GetAll();
             if (result.Success)
             {
                 return Ok(result);
@@ -67,7 +67,7 @@ namespace LavisAcademy.Controllers
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
-            var result = _periodService.GetById(id);
+            var result = _educationService.GetById(id);
             if (result.Success)
             {
                 return Ok(result);

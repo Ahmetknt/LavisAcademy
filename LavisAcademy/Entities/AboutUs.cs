@@ -1,7 +1,7 @@
-﻿using LavisAcademy.Models.Interface;
+﻿using LavisAcademy.Entities.Interface;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LavisAcademy.Models
+namespace LavisAcademy.Entities
 {
     public class AboutUs : IEntity
     {
