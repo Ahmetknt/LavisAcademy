@@ -33,7 +33,8 @@ namespace LavisAcademy.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CommentContent = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CommentContent = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Star = table.Column<float>(type: "real", nullable: false)
                 },
                 constraints: table =>
                 {

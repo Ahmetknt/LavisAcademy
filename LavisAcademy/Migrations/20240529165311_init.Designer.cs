@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LavisAcademy.Migrations
 {
     [DbContext(typeof(LavisContext))]
-    [Migration("20240523093908_init")]
+    [Migration("20240529165311_init")]
     partial class init
     {
         /// <inheritdoc />
@@ -24,7 +24,7 @@ namespace LavisAcademy.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("LavisAcademy.Models.AboutUs", b =>
+            modelBuilder.Entity("LavisAcademy.Entities.AboutUs", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -53,7 +53,7 @@ namespace LavisAcademy.Migrations
                     b.ToTable("AboutUs");
                 });
 
-            modelBuilder.Entity("LavisAcademy.Models.Comment", b =>
+            modelBuilder.Entity("LavisAcademy.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -65,6 +65,9 @@ namespace LavisAcademy.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<float>("Star")
+                        .HasColumnType("real");
+
                     b.Property<string>("UserName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -74,7 +77,7 @@ namespace LavisAcademy.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("LavisAcademy.Models.Education", b =>
+            modelBuilder.Entity("LavisAcademy.Entities.Education", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -99,7 +102,7 @@ namespace LavisAcademy.Migrations
                     b.ToTable("Educations");
                 });
 
-            modelBuilder.Entity("LavisAcademy.Models.EducationCoach", b =>
+            modelBuilder.Entity("LavisAcademy.Entities.EducationCoach", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
