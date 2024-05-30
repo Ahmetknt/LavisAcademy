@@ -8,7 +8,7 @@ namespace LavisAcademy.DataAccess
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=AHMET;Database=LavisAcademy;Trusted_Connection=true; Integrated Security=True; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer(@"Data Source=sql.bsite.net\MSSQL2016;Initial Catalog=lavisacademy_;Persist Security Info=True;User ID=lavisacademy_;Password=LavisAcademy+;Trust Server Certificate=True");
         }
 
         public DbSet<AboutUs> AboutUs { get; set; }

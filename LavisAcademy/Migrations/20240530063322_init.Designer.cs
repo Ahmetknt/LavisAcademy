@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LavisAcademy.Migrations
 {
     [DbContext(typeof(LavisContext))]
-    [Migration("20240529165311_init")]
+    [Migration("20240530063322_init")]
     partial class init
     {
         /// <inheritdoc />
